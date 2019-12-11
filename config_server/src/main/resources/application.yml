@@ -1,0 +1,24 @@
+server:
+  port: 7004
+
+
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/creazyxukong/spring_config.git
+          username:
+          password:
+          search-paths: test
+          default-label: master
+          #basedir: /Users/tangjuhong/Documents/pic
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

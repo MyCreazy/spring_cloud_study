@@ -1,0 +1,19 @@
+server:
+  port: 7001
+
+spring:
+  application:
+    name: register_center
+
+
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: false  # 禁用自我保护模式
+    eviction-interval-timer-in-ms: 60000
+  client:
+    register-with-eureka: true #服务注册开关
+    fetch-registry: true #服务发现开关
+    service-url:
+     defaultZone: http://localhost:7001/eureka   #  1  显示主机名 单机是配置自己  如果不配置默认端口是8761
